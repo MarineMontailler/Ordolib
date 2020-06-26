@@ -1,0 +1,736 @@
+/* HOME PAGE STYLE */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+}
+.mainHome {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "img1 img2";
+}
+
+.mainLeft {
+  grid-area: img1;
+  position: relative;
+  left: 20px;
+  top: 50px;
+}
+.mainRight {
+  grid-area: img2;
+  position: absolute;
+  top: 100px;
+  right: 10px;
+}
+.homeLanding {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+  grid-template-areas:
+    "headerHome"
+    "mainHome"
+    "footerHome";
+  font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+  padding-top: 10px;
+  font-size: 3rem;
+  font-family: "Roboto Mono", monospace;
+}
+/* .arrow {
+  margin: 10px 10px;
+  padding: 10px 10px;
+} */
+
+.headerHome {
+  background: linear-gradient(#1bb21c, #11a937, #6ae88a, #7aec78, #adf3ae);
+  grid-area: headerHome;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  height: 170px;
+}
+.headerLeft {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.headerLeft p {
+  margin-top: 0;
+}
+.headerBottom {
+  font-size: 2rem;
+}
+
+.mainHome {
+  grid-area: mainHome;
+  padding-top: 50px;
+  margin: 5px;
+}
+
+.footerHome {
+  grid-area: footerHome;
+  text-align: center;
+}
+
+/* DOC PAGE STYLE */
+
+.docLanding {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh auto 20vh;
+  grid-template-areas:
+    "headerDoc"
+    "mainDoc"
+    "footerDoc";
+  font-family: "Roboto Mono", monospace;
+}
+
+.headerDoc {
+  background: linear-gradient(#1bb21c, #11a937, #6ae88a, #7aec78, #adf3ae);
+  grid-area: headerDoc;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.headerDocLeft {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.headerDocTop {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.headerDocLeft p {
+  margin-top: 0;
+}
+.headerDocBottom {
+  font-size: 2rem;
+}
+
+.mainDoc {
+  grid-area: mainDoc;
+}
+
+.footerDoc {
+  grid-area: footerDoc;
+  text-align: center;
+}
+
+/* PAT PAGE STYLE */
+
+.patLanding {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+  grid-template-areas:
+    "headerPat"
+    "mainPat"
+    "footerPat";
+  font-family: "Roboto Mono", monospace;
+}
+
+.headerPat {
+  background: linear-gradient(#1bb21c, #11a937, #6ae88a, #7aec78, #adf3ae);
+  grid-area: headerPat;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.headerPatLeft {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.headerPatTop {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.headerPatLeft p {
+  margin-top: 0;
+}
+.headerPatBottom {
+  font-size: 2rem;
+}
+
+.mainPat {
+  grid-area: mainPat;
+}
+
+.footerPat {
+  grid-area: footerPat;
+  text-align: center;
+}
+
+/* PHARMA PAGE STYLE */
+
+.pharmaLanding {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+  grid-template-areas:
+    "headerPharma"
+    "mainPharma"
+    "footerPharma";
+  font-family: "Roboto Mono", monospace;
+}
+.listeMedicaments input {
+  width: 30px;
+}
+#commentDrug {
+  width: 200px;
+  margin-right: 40px;
+}
+.headerPharma {
+  background: linear-gradient(#1bb21c, #11a937, #6ae88a, #7aec78, #adf3ae);
+  grid-area: headerPharma;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.headerPharmaLeft {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.headerPharmaTop {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.headerPharmaLeft p {
+  margin-top: 0;
+}
+.headerPharmaBottom {
+  font-size: 2rem;
+}
+
+.mainPharma {
+  grid-area: mainPharma;
+}
+
+.footerPharma {
+  grid-area: footerPharma;
+  text-align: center;
+}
+
+/* ORDONNANCE STYLE */
+.prescription {
+  border: solid black;
+  display: grid;
+  width: 60%;
+  margin: auto;
+  grid-template-columns: 2fr 1fr;
+  /*grid-template-rows: 40vh 20vh 60vh 25vh 20vh;*/
+  grid-template-areas:
+    "header1 header2"
+    "patient patient"
+    "listeMed listeMed"
+    "commentairesMed commentairesMed"
+    "footerMed footerMed";
+  font-family: Roboto, Arial, sans-serif;
+  padding: 30px;
+  /*grid-gap: 10px;*/
+}
+
+.header1 {
+  grid-area: header1;
+  font-size: 1rem;
+  color: #53ab3b;
+  line-height: 1;
+  /*color: #2cafdf;*/
+}
+/*.header1:first-child,
+.header1:nth-child(2) {
+  line-height: 0.5;
+}*/
+
+.header2 {
+  grid-area: header2;
+  align-self: end;
+  text-align: right;
+  color: #53ab3b;
+  font-size: 1rem;
+  /*color: #2cafdf;*/
+}
+.patient {
+  grid-area: patient;
+  font-size: 1rem;
+}
+.listeMed {
+  grid-area: listeMed;
+  font-size: 1rem;
+  align-self: start;
+  text-align: left;
+  padding: 0;
+}
+.commentairesMed {
+  grid-area: commentairesMed;
+  font-size: 1rem;
+}
+.footerMed {
+  grid-area: footerMed;
+  align-self: end;
+  justify-self: end;
+  width: 50%;
+  height: 40%;
+  text-align: right;
+  font-size: 1rem;
+}
+.listeMedicaments {
+  list-style: none;
+  line-height: 1.2;
+  align-self: start;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.addBtnGreen {
+  margin-left: 2%;
+  border: none;
+  border-radius: 8px;
+  background: #53ab3b;
+  font: bold 13px Arial;
+  color: #fff;
+}
+#patientGG {
+  display: grid;
+  grid-column: repeat(4, 1fr);
+  grid-template-areas: "btn1 btn2 btn3 btn4";
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.ordonnance button {
+  border: none;
+  border-radius: 4px;
+  background: #53ab3b;
+  font: bold 13px Arial;
+  color: #fff;
+  height: 50px;
+  margin-right: 2%;
+  margin-bottom: 10px;
+}
+.ordonnance {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-top: 40px;
+  padding: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .listeMedicaments li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+select {
+  top: 0;
+  cursor: pointer;
+  background: white;
+  border-radius: 4px;
+  margin: 0 15px 15px 0;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #448acb;
+  box-shadow: 0px 3px #373737;
+  color: white;
+  text-align-last: center;
+}
+/* HOME PAGE STYLE */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+}
+.mainHome {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "img1 img2";
+}
+
+.mainLeft {
+  grid-area: img1;
+  position: relative;
+  left: 20px;
+  top: 50px;
+}
+.mainRight {
+  width: 400px;
+  grid-area: img2;
+  position: relative;
+  left: 280px;
+  top: -100px;
+}
+.homeLanding {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+  grid-template-areas:
+    "headerHome"
+    "mainHome"
+    "footerHome";
+  font-family: "Roboto Mono", monospace;
+}
+
+h1 {
+  padding-top: 10px;
+  font-size: 3rem;
+}
+/* .arrow {
+  margin: 10px 10px;
+  padding: 10px 10px;
+} */
+
+.headerHome {
+  background: linear-gradient(#1bb21c, #11a937, #6ae88a, #7aec78, #adf3ae);
+  grid-area: headerHome;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  height: 170px;
+}
+.headerLeft {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.headerLeft p {
+  margin-top: 0;
+}
+.headerBottom {
+  font-size: 2rem;
+}
+
+.mainHome {
+  grid-area: mainHome;
+  padding-top: 50px;
+  margin: 5px;
+}
+
+.footerHome {
+  grid-area: footerHome;
+  text-align: center;
+}
+
+/* DOC PAGE STYLE */
+
+.docLanding {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh auto 20vh;
+  grid-template-areas:
+    "headerDoc"
+    "mainDoc"
+    "footerDoc";
+  font-family: "Roboto Mono", monospace;
+}
+
+.headerDoc {
+  background: linear-gradient(#1bb21c, #11a937, #6ae88a, #7aec78, #adf3ae);
+  grid-area: headerDoc;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.headerDocLeft {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.headerDocTop {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.headerDocLeft p {
+  margin-top: 0;
+}
+.headerDocBottom {
+  font-size: 2rem;
+}
+
+.mainDoc {
+  grid-area: mainDoc;
+}
+
+.footerDoc {
+  grid-area: footerDoc;
+  text-align: center;
+}
+
+/* PAT PAGE STYLE */
+
+.patLanding {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+  grid-template-areas:
+    "headerPat"
+    "mainPat"
+    "footerPat";
+  font-family: "Roboto Mono", monospace;
+}
+
+.headerPat {
+  background: linear-gradient(#1bb21c, #11a937, #6ae88a, #7aec78, #adf3ae);
+  grid-area: headerPat;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.headerPatLeft {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.headerPatTop {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.headerPatLeft p {
+  margin-top: 0;
+}
+.headerPatBottom {
+  font-size: 2rem;
+}
+
+.mainPat {
+  grid-area: mainPat;
+}
+#prescriptionsPatient {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.doc {
+  border: solid 1px;
+  width: 250px;
+  margin-left: 120px;
+  padding: 10px;
+}
+.pat {
+  border: solid 1px;
+  margin-left: 120px;
+  padding: 10px;
+  grid-column-start: 2;
+  grid-column-end: -2;
+  border-radius: 5px;
+  background-image: url(dolip.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.footerPat {
+  grid-area: footerPat;
+  text-align: center;
+}
+
+/* PHARMA PAGE STYLE */
+
+.pharmaLanding {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 60vh 20vh;
+  grid-template-areas:
+    "headerPharma"
+    "mainPharma"
+    "footerPharma";
+  font-family: "Roboto Mono", monospace;
+}
+
+.headerPharma {
+  background: linear-gradient(#1bb21c, #11a937, #6ae88a, #7aec78, #adf3ae);
+  grid-area: headerPharma;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+.headerPharmaLeft {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+.headerPharmaTop {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.headerPharmaLeft p {
+  margin-top: 0;
+}
+.headerPharmaBottom {
+  font-size: 2rem;
+}
+
+.mainPharma {
+  grid-area: mainPharma;
+}
+
+.footerPharma {
+  grid-area: footerPharma;
+  text-align: center;
+}
+
+/* ORDONNANCE STYLE */
+.prescription {
+  border: solid black;
+  display: grid;
+  width: 60%;
+  margin: auto;
+  grid-template-columns: 2fr 1fr;
+  /*grid-template-rows: 40vh 20vh 60vh 25vh 20vh;*/
+  grid-template-areas:
+    "header1 header2"
+    "patient patient"
+    "listeMed listeMed"
+    "commentairesMed commentairesMed"
+    "footerMed footerMed";
+  font-family: Roboto, Arial, sans-serif;
+  padding: 30px;
+  /*grid-gap: 10px;*/
+}
+
+.header1 {
+  grid-area: header1;
+  font-size: 1rem;
+  color: #53ab3b;
+  line-height: 1;
+  /*color: #2cafdf;*/
+}
+/*.header1:first-child,
+.header1:nth-child(2) {
+  line-height: 0.5;
+}*/
+
+.header2 {
+  grid-area: header2;
+  align-self: end;
+  text-align: right;
+  color: #53ab3b;
+  font-size: 1rem;
+  /*color: #2cafdf;*/
+}
+.patient {
+  grid-area: patient;
+  font-size: 1rem;
+}
+.listeMed {
+  grid-area: listeMed;
+  font-size: 1rem;
+  align-self: start;
+  text-align: left;
+  padding: 0;
+}
+.commentairesMed {
+  grid-area: commentairesMed;
+  font-size: 1rem;
+}
+.footerMed {
+  grid-area: footerMed;
+  align-self: end;
+  justify-self: end;
+  width: 50%;
+  height: 40%;
+  text-align: right;
+  font-size: 1rem;
+}
+.listeMedicaments {
+  list-style: none;
+  line-height: 1.2;
+  align-self: start;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.addBtnGreen {
+  border: none;
+  border-radius: 8px;
+  background: #53ab3b;
+  font: bold 23px Arial;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  margin: 20px;
+}
+#patientGG {
+  display: grid;
+  grid-column: repeat(4, 1fr);
+  grid-template-areas: "btn1 btn2 btn3 btn4";
+  justify-content: space-around;
+  margin-left: 10px;
+}
+#patientGG button {
+  border-bottom: 1px solid #53ab3b;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #53ab3b;
+  font: bold 13px Arial;
+  color: #fff;
+  height: 40px;
+  padding-bottom: 13px;
+}
+.ordonnance button {
+  border: none;
+  border-radius: 4px;
+  background: #53ab3b;
+  font: bold 13px Arial;
+  color: #fff;
+  height: 50px;
+  margin-right: 2%;
+  margin-bottom: 10px;
+}
+.pat button {
+  border: none;
+  border-radius: 4px;
+  background: #53ab3b;
+  font: bold 13px Arial;
+  color: #fff;
+  height: 50px;
+  margin-left: 3%;
+  margin-top: 22px;
+}
+.ordonnance {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-top: 40px;
+  padding: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .listeMedicaments li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+select {
+  top: 0;
+  cursor: pointer;
+  background: white;
+  border-radius: 4px;
+  margin: 0 15px 15px 0;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #448acb;
+  box-shadow: 0px 3px #373737;
+  color: white;
+  text-align-last: center;
+}
