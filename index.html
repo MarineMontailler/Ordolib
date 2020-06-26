@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ORDOLIB</title>
+  <link rel="stylesheet" href="src/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto+Mono&display=swap" rel="stylesheet" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="homeLanding">
+    <div class="headerHome">
+      <section class="headerTop">
+        <div class="headerLeft">
+          <p>Ordolib</p>
+        </div>
+        <div class="titleHead">
+          <h1>Vos ordonnances en ligne</h1>
+        </div>
+        <div class="headerRight">
+          <p>Se Connecter</p>
+        </div>
+      </section>
+    </div>
+    <div class="mainHome">
+      <section id="demo" style="display: none">
+        <h2>Sélectionner un espace</h2>
+        <select id="selectPatientDemo">
+          <option value="0">Sélectionner un patient</option>
+        </select>
+        <br />
+        <select id="selectPractitionerDemo"></select>
+        <option value="0">Sélectionner un praticien</option>
+        </select>
+        <br />
+        <select id="selectPharmacistDemo">
+          <option value="0">Sélectionner un pharmacien</option>
+        </select><br />
+      </section>
+      <article class="mainLeft">
+        <img src="src/ordonance.png" alt="" />
+      </article>
+      <article class="mainRight">
+        <img src="src/pharmacie.png" alt="" />
+      </article>
+    </div>
+    <div class="footerHome">
+      <p>***</p>
+      <div class="arrow">
+        <a href="#docLanding"><img src="src/pilbleue.png" alt="arrow" width="80" height="50" /></a>
+      </div>
+    </div>
+  </div>
+  <!-- SECTION PRATICIEN -->
+  <!-- <section id="practitioner" style="display: none"> -->
+  <section id="practitioner">
+    <div class="docLanding" id="docLanding">
+      <div class="headerDoc">
+        <section class="headerDocTop">
+          <div class="headerDocLeft">
+            <p>Ordolib</p>
+          </div>
+          <div class="titleHead">
+            <h1>Espace praticien</h1>
+          </div>
+          <div class="headerDocRight">
+            <p>Online</p>
+          </div>
+        </section>
+      </div>
+      <div class="mainDoc">
+        <select id="selectPatient"> </select>
+        <div class="prescription">
+          <div class="header1">
+            <hr />
+          </div>
+          <div class="header2"></div>
+          <br /><br /><br /><br />
+          <div class="patient"></div>
+          <div class="listeMed" style="display:none">
+            <div class="treatmentForm listeMedicaments">
+              <label for="selectDrug">Médicament :</label>
+              <select id="selectDrug"> </select>
+              <label for="nbDrug">Quantité :</label>
+              <input type="number" id="nbDrug" name="nbDrug" min="1" max="100" placeholder="1" />
+              <label for="perDayDrug">Fréquence/jour:</label>
+              <input type="number" id="perDayDrug" name="perDayDrug" min="1" max="100" placeholder="1" />
+              <label for="duration">Durée(jours) :</label>
+              <input type="number" id="duration" name="duration" min="1" max="100" placeholder="1" />
+              <label for="commentDrug">Commentaires :</label>
+              <input type="text" id="commentDrug" name="commentDrug" size="20" />
+              <label for="substitutable">Non substituable</label>
+              <input type="checkbox" id="substitutable" name="substitutable" />
+              <button id="btnAddTreatment" class="addBtnGreen">
+                Ajouter
+              </button>
+            </div>
+
+            <div id="message"></div>
+            <div class="lstTreatments"></div>
+
+            <!-- <ul class="listeMedicaments">
+                <li>
+                  <label for="medicine">Medicament :</label>
+                  <input type="text" id="medicine" name="medicine" size="15" />
+                  <label for="number">Quantité :</label>
+                  <input type="number" id="number" name="number" />
+                  <label for="frequence">Fréquence/jour:</label>
+                  <input
+                    type="number"
+                    id="frequence"
+                    name="frequence"
+                    min="1"
+                    max="5"
+                    placeholder="1"
+                  />
+                  <label for="time">Durée(jours) :</label>
+                  <input
+                    type="text"
+                    id="time"
+                    name="time"
+                    size="5"
+                    min="1"
+                    max="5"
+                    placeholder="1"
+                  />
+                  <label for="comment">Commentaires :</label>
+                  <input type="text" id="comment" name="comment" size="20" />
+                  <label for="substi">Non substituable</label>
+                  <input type="checkbox" id="substi" name="substi" />
+                  <button class="addBtnGreen">Ajouter</button>
+                </li>
+              </ul> -->
+          </div>
+          <textarea class="commentairesMed" id="commentairesMed" rows="10" style="resize: none" placeholder="Commentaire général"></textarea>
+
+          <div class="footerMed">
+            <p>Signature médecin</p>
+          </div>
+        </div>
+      </div>
+      <div class="footerDoc">
+        <!--Boutton plus-->
+        <a class="button plus" id="button" href="#plus">
+          <span class="bg" id="plus"></span>
+          <span class="symbol"></span>
+        </a>
+        <button class="addBtnGreen" id="btnAddTreatments">Envoyer</button>
+        <div class="arrow">
+          <a href="#patLanding"><img src="src/pilbleue.png" alt="arrow" width="80" height="50" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION PATIENT -->
+  <section id="patient">
+    <!-- <section id="patient" style="display: none"> -->
+    <div class="patLanding" id="patLanding">
+      <div class="headerPat">
+        <section class="headerPatTop">
+          <div class="headerPatLeft">
+            <p>Ordolib</p>
+          </div>
+          <div class="titleHead">
+            <h2>Espace patient</h2>
+          </div>
+          <div class="headerPatRight">
+            <p>Online</p>
+          </div>
+        </section>
+      </div>
+      <div class="mainPat">
+        <!--AJOUT Gérald page patient-->
+        <div id="patientGG">
+          <button class="prescription1" type="button">
+            Nouvelles Ordonnances
+          </button>
+          <button class="prescription2" type="button">
+            Ordonnances en cours
+          </button>
+          <button class="prescription3" type="button">Historique</button>
+          <button class="prescription4" type="button">
+            Pharmacies favorites
+          </button>
+        </div>
+
+        <div id="prescriptionsPatient">
+            <p class="doc">Docteur Pierre Louche<br> Le 26/06/2020<br>
+              Médecine Générale<br>
+              12 rue saint-Philippe<br>
+              69003 Lyon<br>
+              Tél : 0478531888<br>
+              N° RPPS : 10004080460</p>
+              
+             <p class="pat"> Monsieur Jean-Michel  Patient<br>
+              Née le 26/07/2013<br><br>
+              &#8227 Mythoprane 1000 Mg cp (PARACETAMOL EG)<br>
+              &nbsp  1 comprimé par voie orale<br>
+              &nbsp toutes les 6h00 si douleurs ou fièvre
+              &nbsp &nbsp &#8227 3 boites<br>
+              <button class="prescription2" type="button">
+                Transmettre à ma pharmacie
+              </button>
+              </p>
+              
+        </div>
+        <!-- <div id="prescriptionSpace">
+              <div class="ordonnance">
+                <p>Ordonnance du 23/06/2020</p>
+                <button class="see" type="button">Voir l'ordonnance</button>
+                <button class="send" type="button">Envoyer l'ordonnance</button>
+            </div>
+            <div id="prescriptionSpace">
+                <div class="ordonnance">
+                <p>Ordonnance du 17/06/2020</p>
+                <button class="see" type="button">Voir l'ordonnance</button>
+                <button class="send" type="button">Envoyer l'ordonnance</button>
+              </div> -->
+
+        <article class="mainPatRight">
+          <img src="#" alt="" />
+        </article>
+      </div>
+      <div class="footerPat">
+        <p>***</p>
+        <div class="arrow">
+          <a href="#pharmaLanding"><img src="src/pilbleue.png" alt="arrow" width="80" height="50" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPACE PHARMACIEN -->
+  <!-- <section id="pharmacist" style="display: none"> -->
+  <section id="pharmacist">
+    <div class="pharmaLanding" id="pharmaLanding">
+      <div class="headerPharma">
+        <section class="headerPharmaTop">
+          <div class="headerPharmaLeft">
+            <p>Ordolib</p>
+          </div>
+          <div class="titleHead">
+            <h1>Espace pharmacie</h1>
+          </div>
+          <div class="headerPharmaRight">
+            <p>Online</p>
+          </div>
+        </section>
+      </div>
+      <div class="mainPharma">
+        <div class="ordonnance">
+          <p>Ordonnance du 26/06/2020</p>
+          <button class="see" type="button">Voir l'ordonnance</button>
+          <button class="send" type="button">Préparer l'ordonnance</button>
+        </div>
+      </div>
+      <div class="footerPharma">
+        <p>***</p>
+        <div class="arrow">
+          <a href="#homeLanding"><img src="src/pilbleue.png" alt="arrow" width="80" height="50" /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="src/index.js" type="text/javascript"></script>
+</body>
+
+</html>
